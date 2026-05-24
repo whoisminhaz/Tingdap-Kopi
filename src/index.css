@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --color-cafe-900: #0C0B0A;
+  --color-cafe-800: #11100F;
+  --color-cafe-700: rgba(255, 255, 255, 0.05); /* useful for borders */
+  --color-cafe-300: rgba(230, 226, 223, 0.6);
+  --color-cafe-200: rgba(230, 226, 223, 0.8);
+  --color-cafe-100: #E6E2DF;
+  --color-cafe-50: #ffffff;
+  --color-accent: #C5A059;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cafe-900);
+  color: var(--color-cafe-100);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Film Grain Overlay */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.05;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+/* Hide scrollbar for gallery */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
